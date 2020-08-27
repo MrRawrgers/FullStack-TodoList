@@ -53,3 +53,13 @@ exports.updateTodo = function (req, res, next) {
             });
     })
 }
+
+exports.deleteTodo = function (req, res, next) {
+    Todo.findByIdAndRemove(req.params.id, function (err, todo) {
+        if (!todo)
+            res.status(404).send("data is not found");
+        else {
+            res.send(todo)
+        }
+    })
+}

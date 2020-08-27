@@ -1,5 +1,5 @@
 const apiRouter = require('express').Router();
-const { indexTodo, addTodo, updateTodo, idTodo } = require('../controllers/Todo');
+const { indexTodo, addTodo, updateTodo, idTodo, deleteTodo } = require('../controllers/Todo');
 
 apiRouter.route('/')
     .get(indexTodo)
@@ -11,5 +11,7 @@ apiRouter.route('/update/:id')
 apiRouter.route('/:id')
     .get(idTodo);
 
+apiRouter.route('/delete/:id')
+    .delete(deleteTodo)
 
 module.exports = apiRouter;

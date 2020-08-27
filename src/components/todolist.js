@@ -8,7 +8,10 @@ const Todo = props => (
         <td>
             <Link to={"/edit/" + props.todo._id}>Edit</Link>
         </td>
-    </tr>
+        <td>
+            <button onClick={() => axios.delete('http://localhost:9094/todolist/delete/' + props.todo._id).then(res => window.location.reload(false))}>Delete</button>
+        </td>
+    </tr >
 )
 
 export default class TodosList extends Component {
