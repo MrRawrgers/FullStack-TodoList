@@ -1,3 +1,18 @@
 .completed {
   text-decoration: line-through;
 }
+
+.button {
+  background-color: black;
+  border: 2px solid aqua;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+div {
+  font-family: monospace;
+  font-size: x-large;
+}
